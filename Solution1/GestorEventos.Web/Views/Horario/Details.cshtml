@@ -1,0 +1,42 @@
+﻿@model GestorEventos.Web.Models.HorarioViewModel
+
+<div class="card text-primary">
+    <div class="card-header text-center">
+        <h5>Detalles del Horario</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.FechaHoraInicio)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaHoraInicio)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.FechaHoraFin)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaHoraFin)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.EventoId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EventoId)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.SalaId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SalaId)
+            </dd>
+        </dl>
+    </div>
+    <div class="card-footer text-center">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning btn-sm">Editar</a>
+        <a asp-action="Index" class="btn btn-outline-success btn-sm">Volver a la Lista</a>
+    </div>
+</div>

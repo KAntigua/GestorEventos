@@ -1,0 +1,59 @@
+﻿@model GestorEventos.Web.Models.ReservaViewModel
+
+<div class="card text-primary">
+    <div class="card-header text-center">
+        <h5>Crear Reserva</h5>
+    </div>
+    <div class="card-body text-center">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label>Nombre de la Reserva</label>
+                    <input asp-for="NombreReservacion" class="form-control" placeholder="Nombre de la reserva">
+                    <span asp-validation-for="NombreReservacion" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Cédula del Participante</label>
+                    <input asp-for="Cedula" class="form-control" placeholder="Cédula del participante">
+                    <span asp-validation-for="Cedula" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de la Reserva</label>
+                    <input asp-for="FechaReserva" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="FechaReserva" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Cantidad</label>
+                    <input asp-for="Cantidad" class="form-control" placeholder="Cantidad de personas o elementos">
+                    <span asp-validation-for="Cantidad" class="text-danger"></span>
+                </div>
+
+             
+                <div class="form-group">
+                    <label>ID de la Sala</label>
+                    <input asp-for="SalaId" class="form-control" placeholder="Ingrese el ID de la sala" />
+                    <span asp-validation-for="SalaId" class="text-danger"></span>
+                </div>
+
+               
+                <div class="form-group">
+                    <label>ID del Participante</label>
+                    <input asp-for="ParticipanteId" class="form-control" placeholder="Ingrese el ID del participante" />
+                    <span asp-validation-for="ParticipanteId" class="text-danger"></span>
+                </div>
+
+                <div class="card-footer text-center">
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-outline-primary btn-sm" />
+                        <a asp-action="Index" class="btn btn-outline-success btn-sm">Volver a la Lista</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@model GestorEventos.Web.Models.ReservaViewModel
+
+<div class="card text-primary">
+    <div class="card-header text-center">
+        <h5>Eliminar Reserva</h5>
+    </div>
+    <div class="card-body">
+        <p class="text-danger">¿Estás seguro de que deseas eliminar esta reserva?</p>
+        <dl class="row">
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.NombreReservacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NombreReservacion)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.Cedula)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cedula)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.FechaReserva)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaReserva)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cantidad)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.SalaId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SalaId)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.ParticipanteId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ParticipanteId)
+            </dd>
+        </dl>
+    </div>
+    <div class="card-footer text-center">
+        <form asp-action="Delete" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta reserva?');">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Eliminar" class="btn btn-outline-danger btn-sm" />
+            <a asp-action="Index" class="btn btn-outline-secondary btn-sm">Cancelar</a>
+        </form>
+    </div>
+</div>

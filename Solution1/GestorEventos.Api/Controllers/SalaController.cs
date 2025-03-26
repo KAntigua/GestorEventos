@@ -89,7 +89,8 @@ namespace GestorEventos.Api.Controllers
             }
         }
 
-       
+
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSala(int id, [FromBody] SalaDTO salaDTO)

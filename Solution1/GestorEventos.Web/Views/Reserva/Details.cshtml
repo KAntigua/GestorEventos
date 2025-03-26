@@ -1,0 +1,35 @@
+﻿@model GestorEventos.Web.Models.ReservaViewModel
+
+<div class="card text-primary">
+    <div class="card-header text-center">
+        <h5>Participante</h5>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.NombreReservacion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NombreReservacion)
+            </dd>
+
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.Cedula)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cedula)
+            </dd>
+            <dt class="col-sm-2 text-center text-dark">
+                @Html.DisplayNameFor(model => model.SalaId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SalaId)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="card-footer text-center">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning btn-sm">Editar</a>
+        <a asp-action="Index" class="btn btn-outline-success btn-sm">Volver a la lista</a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model GestorEventos.Web.Models.NotificacionViewModel
+
+<div class="card text-primary">
+    <div class="card-header text-center">
+        <h5>Crear Notificación</h5>
+    </div>
+    <div class="card-body text-center">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea asp-for="Mensaje" class="form-control" placeholder="Mensaje de la notificación"></textarea>
+                    <span asp-validation-for="Mensaje" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Fecha de Envío</label>
+                    <input asp-for="FechaEnvio" type="datetime-local" class="form-control" />
+                    <span asp-validation-for="FechaEnvio" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Participante ID</label>
+                    <input asp-for="ParticipanteId" class="form-control" placeholder="ID del participante" />
+                    <span asp-validation-for="ParticipanteId" class="text-danger"></span>
+                </div>
+
+                <div class="card-footer text-center">
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-outline-primary btn-sm" />
+                        <a asp-action="Index" class="btn btn-outline-success btn-sm">Volver a la Lista</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
